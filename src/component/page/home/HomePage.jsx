@@ -1,7 +1,18 @@
 export const HomePage = () => {
   return (
-    <div style={{ display: "flex", minHeight: 400, justifyContent: "center" }}>
-      <span style={{ fontWeight: 900 }}>home</span>
+    <div
+      style={{
+        display: "flex",
+        minHeight: 400,
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <span style={{ fontWeight: 700 }}>
+        Welcome!
+        <br />
+        Please select menu :D
+      </span>
     </div>
   );
 };
