@@ -66,19 +66,60 @@ const CatContainer = () => {
     // }
   };
 
+  const hasValueMode = () => {
+    return (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <button
+          className="button is-primary is-outlined"
+          onClick={decreaseIndex}
+        >
+          prev
+        </button>
+        <img
+          src={imgUrl}
+          alt="고양이 이미지"
+          style={{
+            width: "500px",
+            maxHeight: "600px",
+            marginLeft: "20px",
+            marginRight: "20px",
+          }}
+        />
+        <button
+          className="button is-primary is-outlined"
+          onClick={increaseIndex}
+        >
+          next
+        </button>
+      </div>
+    );
+  };
+
+  const LoadingMode = () => {
+    return (
+      <div>
+        <span>Loading...</span>
+      </div>
+    );
+  };
+
+  const hasErrorMode = () => {
+    return <></>;
+  };
+
   return (
     <>
       <Layout className={"is-primary"}>
         <HeaderDiv />
       </Layout>
 
-      <Layout>
-        <div>
-          <img src={imgUrl} alt="고양이 이미지" />
-          <button onClick={decreaseIndex}>prev</button>
-          <button onClick={increaseIndex}>next</button>
-        </div>
-      </Layout>
+      <Layout></Layout>
     </>
   );
   // 새로 페이지를 이동하는거니까, return 문 안에 페이지를 구성하는 코드를 첨부터 끝까지() 넣어주었다.
