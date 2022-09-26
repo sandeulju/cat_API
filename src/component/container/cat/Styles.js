@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+// Loading Start
+
 export const Background = styled.div`
   position: absolute;
   width: 100vw;
@@ -21,6 +23,10 @@ export const LoadingText = styled.div`
   font-size: 12px;
   font-weight: 600;
 `;
+
+// Loading End
+
+// Error start
 
 export const ErrorBackground = styled.div`
   position: absolute;
@@ -44,3 +50,29 @@ export const ErrorText = styled.div`
   font-weight: 600;
   color: #ffffff;
 `;
+
+// Error End
+
+// CatProfile start
+
+export const ProfileWrapbox = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const ProfileBackground = styled.div`
+  width: 12rem;
+  height: 12rem;
+  margin: 10px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.2);
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  cursor: pointer;
+`;
+
+// CatProfile End

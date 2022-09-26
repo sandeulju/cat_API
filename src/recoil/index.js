@@ -13,7 +13,7 @@ export const catDataState = atom({
 export const catDataStateSelecter = selector({
   key: "catDataState",
   get: async ({ get }) => {
-    const res = await catApi(50);
+    const res = await catApi(52);
 
     return res.data;
     // async 부분이 비동기 처리되고 await 부분이 동기 처리!

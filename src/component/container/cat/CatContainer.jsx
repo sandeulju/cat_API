@@ -6,6 +6,8 @@ import HeaderDiv from "../../Header/HeaderDiv";
 import { useState } from "react";
 import Loading from "./Loading";
 import HasError from "./HasError";
+import CatProfile from "./CatProfile";
+import { ProfileBackground } from "./Styles";
 // 상단 import 부분은 단축키 사용하고 신경쓰지말기(ctrl + space)
 
 const CatContainer = () => {
@@ -41,6 +43,11 @@ const CatContainer = () => {
   // Error 나면? -> 1 - 5 - 3 - 4
   // finally 엔간해선 써주기(굳이 쓸 필요없다면 X)
 
+  // useEffect(() => {
+  //   setImgUrl(catApis.contents[contentArrayIndex].url);
+  //   setContent(catApis.contents);
+  // }, []);
+
   useEffect(() => {
     // useEffect 라이프사이클 참조 - 렌더링이 완료되자마자 실행된다! 그래서 useEffect를 사용함.
     if (catApis.state === "hasValue") {
@@ -61,7 +68,7 @@ const CatContainer = () => {
     // if문으로 상태에 따라서 setContent를 수정할지 아닐지 분기처리해준다.
   }, [catApis]);
 
-  console.log(catApis.state);
+  console.log(catApis);
   console.log(content);
 
   // 배열의 index를 증감시키며 slide하기
@@ -71,27 +78,25 @@ const CatContainer = () => {
   // const selectArrayImage = content[contentArrayIndex];
   // console.log(selectArrayImage);
 
-  const increaseIndex = () => {
-    ++contentArrayIndex;
-    // alert(contentArrayIndex);
-    setImgUrl(content[contentArrayIndex].url);
-    // if (contentArrayIndex > content.length) {
-    //   return (contentArrayIndex = 0);
-    // } else if (contentArrayIndex <= content.length) {
-    //   return contentArrayIndex;
-    // }
-  };
+  // const increaseIndex = () => {
+  //   console.log("increase :::", content[contentArrayIndex]);
 
-  const decreaseIndex = () => {
-    --contentArrayIndex;
-    setImgUrl(content[contentArrayIndex].url);
-    // alert(contentArrayIndex);
-    // if (contentArrayIndex < 0) {
-    //   return (contentArrayIndex = content.length);
-    // } else if (contentArrayIndex >= 0) {
-    //   return contentArrayIndex;
-    // }
-  };
+  //   ++contentArrayIndex;
+
+  //   setImgUrl(content[contentArrayIndex].url);
+
+  //   console.log("increase after:::", content[contentArrayIndex]);
+  // };
+
+  // const decreaseIndex = () => {
+  //   console.log("decrease :::", content[contentArrayIndex].url);
+
+  //   --contentArrayIndex;
+
+  //   setImgUrl(content[contentArrayIndex].url);
+
+  //   console.log("decrease after :::", content[contentArrayIndex].url);
+  // };
 
   return (
     <>
@@ -100,35 +105,12 @@ const CatContainer = () => {
       </Layout>
 
       <Layout>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <button
-            className="button is-primary is-outlined"
-            onClick={decreaseIndex}
-          >
-            prev
-          </button>
-          <img
-            src={imgUrl}
-            alt="고양이 이미지"
-            style={{
-              width: "500px",
-              maxHeight: "600px",
-              marginLeft: "20px",
-              marginRight: "20px",
-            }}
-          />
-          <button
-            className="button is-primary is-outlined"
-            onClick={increaseIndex}
-          >
-            next
-          </button>
+        <div style={{ padding: "0 20px" }}>
+          {content.map((data) => (
+            <ProfileBackground>
+              <img src={data.url} style={{ borderRadius: "10px" }} />
+            </ProfileBackground>
+          ))}
         </div>
       </Layout>
       {loading === true ? <Loading /> : ""}

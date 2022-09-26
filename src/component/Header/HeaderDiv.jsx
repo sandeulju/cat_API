@@ -17,7 +17,7 @@ const HeaderDiv = () => {
           <NavLink
             to={"/dog"}
             className="link is-info"
-            style={{ textDecoration: "none" }}
+            style={{ textDecoration: "none", margin: "0 30px" }}
           >
             Dog
           </NavLink>
@@ -26,7 +26,7 @@ const HeaderDiv = () => {
           <NavLink
             to={"/cat"}
             className="link is-info"
-            style={{ textDecoration: "none" }}
+            style={{ textDecoration: "none", margin: "0 30px" }}
           >
             Cat
           </NavLink>
@@ -35,17 +35,23 @@ const HeaderDiv = () => {
           <img
             src="https://bulma.io/images/bulma-type.png"
             alt=""
-            style={{ height: 30, cursor: "pointer" }}
+            style={{ height: 30, cursor: "pointer", margin: "0 30px" }}
             onClick={onClick}
           />
         </p>
         <p className="level-item has-text-centered">
-          <NavLink className="link is-info" style={{ textDecoration: "none" }}>
+          <NavLink
+            className="link is-info"
+            style={{ textDecoration: "none", margin: "0 30px" }}
+          >
             Ohter1
           </NavLink>
         </p>
         <p className="level-item has-text-centered">
-          <NavLink className="link is-info" style={{ textDecoration: "none" }}>
+          <NavLink
+            className="link is-info"
+            style={{ textDecoration: "none", margin: "0 30px" }}
+          >
             Ohter2
           </NavLink>
         </p>
