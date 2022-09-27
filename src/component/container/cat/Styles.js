@@ -55,24 +55,29 @@ export const ErrorText = styled.div`
 
 // CatProfile start
 
-export const ProfileWrapbox = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-`;
+// export const ProfileWrapbox = styled.div`
+//   display: flex;
+//   flex-direction: row;
+//   align-items: center;
+//   justify-content: center;
+// `;
 
-export const ProfileBackground = styled.div`
-  width: 12rem;
-  height: 12rem;
-  margin: 10px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.2);
-  display: inline-flex;
-  flex-direction: row;
-  justify-content: center;
-  cursor: pointer;
-`;
+// export const ProfileBackground = styled.div`
+//   width: 12rem;
+//   height: 12rem;
+//   margin: 10px;
+//   background-color: none;
+//   border-radius: 10px;
+//   box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.2);
+//   display: inline-flex;
+//   flex-direction: row;
+//   justify-content: center;
+//   cursor: pointer;
+//   z-index: 50;
+
+//   &:hover {
+//     background: #000000b5;
+//   }
+// `;
 
 // CatProfile End

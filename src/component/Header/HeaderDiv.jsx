@@ -41,18 +41,20 @@ const HeaderDiv = () => {
         </p>
         <p className="level-item has-text-centered">
           <NavLink
+            to={"/other1"}
             className="link is-info"
             style={{ textDecoration: "none", margin: "0 30px" }}
           >
-            Ohter1
+            Other1
           </NavLink>
         </p>
         <p className="level-item has-text-centered">
           <NavLink
+            to={"/other2"}
             className="link is-info"
             style={{ textDecoration: "none", margin: "0 30px" }}
           >
-            Ohter2
+            Other2
           </NavLink>
         </p>
       </nav>
