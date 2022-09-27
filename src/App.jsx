@@ -12,6 +12,8 @@ import { Route, Routes } from "react-router-dom";
 import HomeContainer from "./component/container/home/HomeContainer";
 import CatContainer from "./component/container/cat/CatContainer";
 import DogContainer from "./component/container/dog/DogContainer";
+import Other1Container from "./component/container/other1/Other1Container";
+import Other2Container from "./component/container/other2/Other2Container";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
       <Route path="/" element={<HomeContainer />} />
       <Route path="/dog" element={<DogContainer />} />
       <Route path="/cat" element={<CatContainer />} />
+      <Route path="/other1" element={<Other1Container />} />
+      <Route path="/other2" element={<Other2Container />} />
     </Routes>
   );
   // Route를 활용해 라우팅 해주고, 링크가 실제 쓰이는 부분인 HeaderDiv로 가서

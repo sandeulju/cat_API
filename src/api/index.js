@@ -49,3 +49,5 @@ export const dogApi = (limit) => {
 
   return axios.get(url, { headers: { ["x-api-key"]: config.DOG.API_KEY } });
 };
+
+// export const catBreedApi = ()
