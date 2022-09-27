@@ -1,4 +1,26 @@
-# Getting Started with Create React App
+# CAT API Handling Practice :smiley_cat:
+
+react recoil을 사용하여 cat api를 핸들링하는 연습을 합니다.
+
+## Mission List :sunglasses:
+
+- React Recoil 라이브러리 공부해서 사용하기 :white_check_mark:
+- CSS 프레임워크 활용하기 (Bulma CSS) :white_check_mark:
+- 관련 개념 정리하고 다시 공부하기
+  - Axios
+  - (recoil) atoms, selector :heavy_check_mark:
+  - API (REST API) :heavy_check_mark:
+  - react-router-dom
+  - jwt
+  - Promise :heavy_check_mark:
+  - async await :heavy_check_mark:
+  - fetch
+  - react life cycle :heavy_check_mark:
+  - query parameter
+- cat api 받아와서 화면에 뿌리기 :white_check_mark:
+- cat 성공하면 dog api 도전해보기
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
