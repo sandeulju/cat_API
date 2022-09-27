@@ -11,6 +11,8 @@ const config = {
     API: "https://api.thecatapi.com/v1/images/search?limit={limit}",
     API_KEY:
       "live_dJLGqK7t9agvEQBMG7tHlN5CsihhfVvPAPw4x6jQ3n7fGSdbsbLG2NnS3R1H5q6w",
+    BREED_API:
+      "https://api.thecatapi.com/v1/images/search?breed_ids={breed.id}",
   },
 };
 

@@ -106,7 +106,10 @@ const CatContainer = () => {
       </Layout>
 
       <Layout>
-        <div style={{ padding: "0 20px" }}>
+        <div
+          // className={"level-item has-text-centered is-mobile"}
+          style={{ padding: "0 20px" }}
+        >
           {content.map((data) => (
             <div className={"img-wrapper"}>
               <div className={"dark-hover"}>
