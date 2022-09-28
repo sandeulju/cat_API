@@ -7,7 +7,6 @@ import HeaderDiv from "../../Header/HeaderDiv";
 import { useState } from "react";
 import Loading from "./Loading";
 import HasError from "./HasError";
-import CatModal from "./CatModal/CatModal";
 import CatModalBasic from "./CatModal/CatModalBasic";
 // import CatProfile from "./CatProfile";
 // import { ProfileBackground } from "./Styles";
@@ -147,6 +146,9 @@ const CatContainer = () => {
     </>
   );
   // 새로 페이지를 이동하는거니까, return 문 안에 페이지를 구성하는 코드를 첨부터 끝까지() 넣어주었다.
+
+  // {modalOpen && (<CatModalBasic catId={catId} setModalOpen={setModalOpen} />)}
+  // 이 코드는 map 안에 넣으면 안된다(밖에 두고 써도 상관 X - 어차피 원하는 div에 onClick만 걸어주면 되니까)
 };
 
 export default CatContainer;

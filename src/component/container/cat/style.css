@@ -32,7 +32,7 @@
 .dark-hover {
   width: inherit;
   height: inherit;
-  border-radius: inherit;
+  border-radius: 10px;
   background-color: #000000;
   opacity: 0;
   position: absolute;
