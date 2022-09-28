@@ -7,6 +7,8 @@ import HeaderDiv from "../../Header/HeaderDiv";
 import { useState } from "react";
 import Loading from "./Loading";
 import HasError from "./HasError";
+import CatModal from "./CatModal/CatModal";
+import CatModalBasic from "./CatModal/CatModalBasic";
 // import CatProfile from "./CatProfile";
 // import { ProfileBackground } from "./Styles";
 // 상단 import 부분은 단축키 사용하고 신경쓰지말기(ctrl + space)
@@ -16,8 +18,20 @@ const CatContainer = () => {
   const [content, setContent] = useRecoilState(catDataState);
   const [imgUrl, setImgUrl] = useState();
   const [loading, setLoading] = useState(true);
+  const [catId, setCatId] = useState();
   const [Error, setError] = useState(true);
   let contentArrayIndex = 0;
+
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const showModal = (id) => {
+    setCatId(id);
+    setModalOpen(true);
+  };
+
+  useEffect(() => {
+    console.log("로그테스트", modalOpen);
+  }, [modalOpen]);
   // https://recoiljs.org/docs/api-reference/core/Loadable 참고했음
   // 핵심내용 발췌 : state: 원자 또는 선택기의 현재 상태입니다. 가능한 값은 'hasValue', 'hasError'또는 'loading'입니다.
   // 이 상태에서 catApis를 console에 찍으면 state(hasValue, hasError, loading 셋 중 하나가 뜸),
@@ -96,8 +110,11 @@ const CatContainer = () => {
     // if문으로 상태에 따라서 setContent를 수정할지 아닐지 분기처리해준다.
   }, [catApis]);
 
-  console.log(catApis);
-  console.log(content);
+  // console.log(catApis);
+  // console.log(content);
+
+  // 그냥 단순히 원시값 변경시키는 작업(ex> boolean)은 useState 쓰지 않아도 됨
+  // 계속 값이 변경되거나 하는 값을 다룰때 사용
 
   return (
     <>
@@ -106,18 +123,23 @@ const CatContainer = () => {
       </Layout>
 
       <Layout>
-        <div
-          // className={"level-item has-text-centered is-mobile"}
-          style={{ padding: "0 20px" }}
-        >
+        <div style={{ padding: "0 20px" }}>
           {content.map((data) => (
             <div className={"img-wrapper"}>
-              <div className={"dark-hover"}>
-                <p className={"p-white-hover"}>My ID is {data.id}!!!</p>
+              <div
+                className={"modal-wrapper"}
+                onClick={() => showModal(data.id)}
+              >
+                <div className={"dark-hover"}>
+                  <p className={"p-white-hover"}>My ID is {data.id}!!!</p>
+                </div>
               </div>
               <img src={data.url} className={"img-style"} alt="고양이 이미지" />
             </div>
           ))}
+          {modalOpen && (
+            <CatModalBasic catId={catId} setModalOpen={setModalOpen} />
+          )}
         </div>
       </Layout>
       {loading === true ? <Loading /> : ""}

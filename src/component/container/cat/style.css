@@ -5,11 +5,28 @@
   height: 12rem;
   margin: 10px;
   display: inline-flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   cursor: pointer;
   border-radius: 10px;
   position: relative;
+}
+
+.modal-wrapper {
+  width: inherit;
+  height: inherit;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+}
+
+.modal-header {
+  position: relative;
+  padding: 16px 64px 16px 16px;
+  background-color: #f1f1f1;
+  font-weight: 700;
 }
 
 .dark-hover {
@@ -21,8 +38,11 @@
   position: absolute;
   transition: all 0.3s linear;
   display: flex;
+  flex-direction: column;
+  flex-flow: wrap;
   justify-content: center;
   align-items: center;
+  align-content: center;
 }
 
 .dark-hover:hover {
@@ -34,6 +54,7 @@
   justify-content: center;
   color: white;
   font-family: "noto-sans-KR";
+  padding: 15px;
 }
 
 .img-style {
