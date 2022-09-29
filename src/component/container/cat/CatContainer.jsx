@@ -15,13 +15,12 @@ import CatModalBasic from "./CatModal/CatModalBasic";
 const CatContainer = () => {
   const catApis = useRecoilValueLoadable(catDataStateSelecter);
   const [content, setContent] = useRecoilState(catDataState);
-  const [imgUrl, setImgUrl] = useState();
   const [loading, setLoading] = useState(true);
-  const [catId, setCatId] = useState();
   const [Error, setError] = useState(true);
-  let contentArrayIndex = 0;
-
+  const [catId, setCatId] = useState();
   const [modalOpen, setModalOpen] = useState(false);
+  // let contentArrayIndex = 0;
+  // const [imgUrl, setImgUrl] = useState();
 
   const showModal = (id) => {
     setCatId(id);
@@ -92,7 +91,7 @@ const CatContainer = () => {
   useEffect(() => {
     // useEffect 라이프사이클 참조 - 렌더링이 완료되자마자 실행된다! 그래서 useEffect를 사용함.
     if (catApis.state === "hasValue") {
-      setImgUrl(catApis.contents[contentArrayIndex].url);
+      // setImgUrl(catApis.contents[contentArrayIndex].url);
       setContent(catApis.contents);
       setLoading(false);
       setError(false);
