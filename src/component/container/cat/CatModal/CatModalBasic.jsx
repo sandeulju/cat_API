@@ -5,9 +5,9 @@ import { ModalBackground, ModalWindow, ModalClose } from "./Styles";
 const CatModalBasic = ({ catId, setModalOpen }) => {
   //   const catApis = useRecoilValueLoadable(catDataStateSelecter);
   //   const [content, setContent] = useRecoilState(catDataState);
-  useEffect(() => {
-    console.log("catId::", catId);
-  }, []);
+  // useEffect(() => {
+  //   console.log("catId::", catId);
+  // }, []);
 
   // 모달 끄기 (X버튼 onClick 이벤트 핸들러)
   const closeModal = () => {

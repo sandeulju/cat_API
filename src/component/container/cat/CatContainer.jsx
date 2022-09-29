@@ -13,10 +13,15 @@ import CatModalBasic from "./CatModal/CatModalBasic";
 // 상단 import 부분은 단축키 사용하고 신경쓰지말기(ctrl + space)
 
 const CatContainer = () => {
+  // API Hook
   const catApis = useRecoilValueLoadable(catDataStateSelecter);
   const [content, setContent] = useRecoilState(catDataState);
+
+  // Loading, Error Hook
   const [loading, setLoading] = useState(true);
   const [Error, setError] = useState(true);
+
+  // Modal Hook
   const [catId, setCatId] = useState();
   const [modalOpen, setModalOpen] = useState(false);
   // let contentArrayIndex = 0;
@@ -27,9 +32,9 @@ const CatContainer = () => {
     setModalOpen(true);
   };
 
-  useEffect(() => {
-    console.log("로그테스트", modalOpen);
-  }, [modalOpen]);
+  // useEffect(() => {
+  //   console.log("로그테스트", modalOpen);
+  // }, [modalOpen]);
   // https://recoiljs.org/docs/api-reference/core/Loadable 참고했음
   // 핵심내용 발췌 : state: 원자 또는 선택기의 현재 상태입니다. 가능한 값은 'hasValue', 'hasError'또는 'loading'입니다.
   // 이 상태에서 catApis를 console에 찍으면 state(hasValue, hasError, loading 셋 중 하나가 뜸),
