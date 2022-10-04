@@ -13,7 +13,7 @@ const Other1Container = () => {
       <Layout>
         <div className="todo-all-wrap">
           <div className="todo-title-wrap">
-            <p className="todo-title">Todo with Recoil state managements</p>
+            <b className="todo-title">Todo with Recoil state managements</b>
           </div>
 
           <div className="todo-setmode-wrap">
