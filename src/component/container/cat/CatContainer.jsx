@@ -8,6 +8,7 @@ import { useState } from "react";
 import Loading from "./Loading";
 import HasError from "./HasError";
 import CatModalBasic from "./CatModal/CatModalBasic";
+// 코드 경로 줄이는 법 : 필요한 함수를 index.js 안에 넣고 전부 거기서 import 하기(모든 경로가 index에서 시작하는 느낌)
 // import CatProfile from "./CatProfile";
 // import { ProfileBackground } from "./Styles";
 // 상단 import 부분은 단축키 사용하고 신경쓰지말기(ctrl + space)
