@@ -2,7 +2,11 @@ import { useRecoilState, useRecoilValueLoadable } from "recoil";
 import { useState, useEffect } from "react";
 import { Layout } from "../../Layout/Layout";
 import HeaderDiv from "../../Header/HeaderDiv";
-import ListComponent from "./ListComponent";
+import ListItem from "./ListItem";
+import TodoTemplete from "./TodoTemplete";
+import TodoHeader from "./TodoHeader";
+import TodoCreate from "./TodoCreate";
+import TodoList from "./TodoList";
 import "./style.css";
 
 const Other1Container = () => {
@@ -13,6 +17,20 @@ const Other1Container = () => {
       </Layout>
 
       <Layout>
+        <div className="todo-all-wrap" style={{ marginRight: "10px" }}>
+          <TodoHeader></TodoHeader>
+          <TodoCreate></TodoCreate>
+          <div className="todo-list-all-wrap">
+            <div className="todo-list-ul-wrap">
+              <b className="todo-list-title">Just Do It!</b>
+              <p className="todo-list-state">현재 {}개의 스케줄이 있습니다</p>
+            </div>
+            <TodoList></TodoList>
+            <TodoList></TodoList>
+            <TodoList></TodoList>
+          </div>
+        </div>
+
         <div className="todo-all-wrap">
           <div className="todo-title-wrap">
             <b className="todo-title">Todo with Recoil state managements</b>
@@ -44,7 +62,7 @@ const Other1Container = () => {
             <div className="todo-list-ul-wrap">
               <b className="todo-list-title">진행 예정</b>
               <ul className="todo-list-ul">
-                <ListComponent />
+                <ListItem />
               </ul>
               <p className="todo-list-state">
                 진행 예정인 스케줄이 아직 없습니다.
@@ -53,19 +71,7 @@ const Other1Container = () => {
 
             <div className="todo-list-ul-wrap">
               <b className="todo-list-title">진행 중</b>
-              <ul className="todo-list-ul">
-                <li className="todo-list-li">
-                  <p>
-                    투두리스트 만들기 <span>진행 중</span>
-                  </p>
-                  <button className="todo-list-li-button" type="submit">
-                    삭제
-                  </button>
-                  <button className="todo-list-li-button" type="submit">
-                    완료
-                  </button>
-                </li>
-              </ul>
+              <ul className="todo-list-ul"></ul>
               <p className="todo-list-state">
                 진행 중인 스케줄이 아직 없습니다.
               </p>
@@ -73,19 +79,7 @@ const Other1Container = () => {
 
             <div className="todo-list-ul-wrap">
               <b className="todo-list-title">완료</b>
-              <ul className="todo-list-ul">
-                <li className="todo-list-li">
-                  <p>
-                    투두리스트 만들기 <span>완료</span>
-                  </p>
-                  <button className="todo-list-li-button" type="submit">
-                    삭제
-                  </button>
-                  <button className="todo-list-li-button" type="submit">
-                    진행중
-                  </button>
-                </li>
-              </ul>
+              <ul className="todo-list-ul"></ul>
               <p className="todo-list-state">완료된 스케줄이 아직 없습니다.</p>
             </div>
           </div>

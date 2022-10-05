@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const ListComponent = () => {
+const ListItem = () => {
   return (
     <>
       <li className="todo-list-li">
@@ -18,4 +18,4 @@ const ListComponent = () => {
   );
 };
 
-export default ListComponent;
+export default ListItem;
