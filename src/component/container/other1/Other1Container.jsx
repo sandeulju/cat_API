@@ -2,6 +2,7 @@ import { useRecoilState, useRecoilValueLoadable } from "recoil";
 import { useState, useEffect } from "react";
 import { Layout } from "../../Layout/Layout";
 import HeaderDiv from "../../Header/HeaderDiv";
+import "./style.css";
 
 const Other1Container = () => {
   return (
@@ -25,35 +26,52 @@ const Other1Container = () => {
           </div>
 
           <div className="todo-input-wrap">
-            <input type="text" placeholder="오늘의 할일을 입력해주세요!" />
-            <input type="submit" />
+            <input
+              className="todo-input"
+              type="text"
+              placeholder="오늘의 할일을 입력해주세요!"
+            />
+            <input className="todo-submit" type="submit" />
           </div>
 
           <div className="todo-list-all-wrap">
-            <div className="todo-list-top-wrap">
-              <p className="todo-list-title">Just Do It!</p>
+            <div className="todo-list-ul-wrap">
+              <b className="todo-list-title">Just Do It!</b>
               <p className="todo-list-state">현재 {}개의 스케줄이 있습니다</p>
             </div>
 
             <div className="todo-list-ul-wrap">
-              <p className="todo-list-title">진행 예정</p>
-              <ul className="todo-list">
-                <li>진행 예정인 스케줄이 아직 없습니다.</li>
+              <b className="todo-list-title">진행 예정</b>
+              <ul className="todo-list-ul">
+                <li className="todo-list-li">
+                  <p>
+                    투두리스트 만들기 <span>진행 예정</span>
+                  </p>
+                  <button className="todo-list-li-button" type="submit">
+                    진행중
+                  </button>
+                  <button className="todo-list-li-button" type="submit">
+                    완료
+                  </button>
+                </li>
               </ul>
+              <p className="todo-list-state">
+                진행 예정인 스케줄이 아직 없습니다.
+              </p>
             </div>
 
             <div className="todo-list-ul-wrap">
-              <p className="todo-list-title">진행 중</p>
-              <ul className="todo-list">
-                <li>진행 중인 스케줄이 아직 없습니다.</li>
-              </ul>
+              <b className="todo-list-title">진행 중</b>
+              <ul className="todo-list-ul"></ul>
+              <p className="todo-list-state">
+                진행 중인 스케줄이 아직 없습니다.
+              </p>
             </div>
 
             <div className="todo-list-ul-wrap">
-              <p className="todo-list-title">완료</p>
-              <ul className="todo-list">
-                <li>완료된 스케줄이 아직 없습니다.</li>
-              </ul>
+              <b className="todo-list-title">완료</b>
+              <ul className="todo-list-ul"></ul>
+              <p className="todo-list-state">완료된 스케줄이 아직 없습니다.</p>
             </div>
           </div>
         </div>
