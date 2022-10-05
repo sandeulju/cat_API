@@ -1,13 +1,13 @@
 import { useRecoilState, useRecoilValueLoadable } from "recoil";
 import { useState, useEffect } from "react";
-import { Layout } from "../../Layout/Layout";
-import HeaderDiv from "../../Header/HeaderDiv";
-import ListItem from "./ListItem";
-import TodoTemplete from "./TodoTemplete";
-import TodoHeader from "./TodoHeader";
-import TodoCreate from "./TodoCreate";
-import TodoList from "./TodoList";
-import "./style.css";
+import { Layout } from "../../../Layout/Layout";
+import HeaderDiv from "../../../Header/HeaderDiv";
+import ListItem from "../components/ListItem";
+import TodoTemplete from "../components/TodoTemplete";
+import TodoHeader from "../components/TodoHeader";
+import TodoCreate from "../components/TodoCreate";
+import TodoList from "../components/TodoList";
+import "../style.css";
 
 const Other1Container = () => {
   return (
@@ -25,9 +25,9 @@ const Other1Container = () => {
               <b className="todo-list-title">Just Do It!</b>
               <p className="todo-list-state">현재 {}개의 스케줄이 있습니다</p>
             </div>
-            <TodoList></TodoList>
-            <TodoList></TodoList>
-            <TodoList></TodoList>
+            <TodoList state="진행 예정"></TodoList>
+            <TodoList state="진행 중"></TodoList>
+            <TodoList state="완료"></TodoList>
           </div>
         </div>
 

@@ -12,7 +12,7 @@ import { Route, Routes } from "react-router-dom";
 import HomeContainer from "./component/container/home/HomeContainer";
 import CatContainer from "./component/container/cat/CatContainer";
 import DogContainer from "./component/container/dog/DogContainer";
-import Other1Container from "./component/container/other1/Other1Container";
+import Other1Container from "./component/container/other1/pages/Other1Container";
 import Other2Container from "./component/container/other2/Other2Container";
 
 function App() {
