@@ -116,11 +116,11 @@ input:checked + .slider:before {
 }
 
 .todo-submit:hover {
-  background-color: rgb(212, 212, 212);
+  background-color: rgb(148, 148, 148);
 }
 
 .todo-submit:active {
-  background-color: #63b0ee;
+  background-color: #2f8dda;
 }
 
 .todo-list-all-wrap {
@@ -174,4 +174,12 @@ input:checked + .slider:before {
   background-color: rgb(126, 126, 126);
   color: #e6e6e6;
   margin-left: 3px;
+}
+
+.todo-list-li-button:hover {
+  background-color: rgb(92, 92, 92);
+}
+
+.todo-list-li-button:active {
+  background-color: #2f8dda;
 }
