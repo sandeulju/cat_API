@@ -10,6 +10,8 @@ import TodoList from "../components/TodoList";
 import "../style.css";
 
 const Other1Container = () => {
+  const [todoList, setTodoList] = useState([]);
+
   return (
     <>
       <Layout className={"is-primary"}>
@@ -19,7 +21,11 @@ const Other1Container = () => {
       <Layout>
         <div className="todo-all-wrap" style={{ marginRight: "10px" }}>
           <TodoHeader></TodoHeader>
-          <TodoCreate></TodoCreate>
+          <TodoCreate
+            todoList={todoList}
+            setTodoList={setTodoList}
+          ></TodoCreate>
+          {/* 입력한 값을 앞서 생성한 useState hook에 담기 위해 TodoCreate 컴포넌트로 todoList와 setTodoList()를 넘겨준다 */}
           <div className="todo-list-all-wrap">
             <div className="todo-list-ul-wrap">
               <b className="todo-list-title">Just Do It!</b>
