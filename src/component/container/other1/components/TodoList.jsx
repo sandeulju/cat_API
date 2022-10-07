@@ -1,14 +1,27 @@
 import { useState, useEffect } from "react";
+import ListItem from "./ListItem";
 
-const TodoList = (props) => {
+const TodoList = ({ title, todoList, setTodoList }) => {
   return (
     <>
       <div className="todo-list-ul-wrap">
-        <b className="todo-list-title">{props.state}</b>
-        <ul className="todo-list-ul"></ul>
+        {/* props로 부터 title 값을 전달 받음 */}
+        <b className="todo-list-title">{title}</b>
+        <ul className="todo-list-ul">
+          {todoList && // todoList가 있을때만 출력
+            todoList.map((todoItem) => (
+              // map을 이용하여 TodoItem을 출력
+              <ListItem
+                key={todoItem.id}
+                todoItem={todoItem}
+                todoList={todoList}
+                setTodoList={setTodoList}
+              />
+            ))}
+        </ul>
         <p className="todo-list-state">
-          {props.state}
-          {props.state === "완료" ? "된" : "인"} 스케줄이 아직 없습니다.
+          {title}
+          {title === "완료" ? "된" : "인"} 스케줄이 아직 없습니다.
         </p>
       </div>
     </>

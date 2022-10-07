@@ -31,7 +31,12 @@ const Other1Container = () => {
               <b className="todo-list-title">Just Do It!</b>
               <p className="todo-list-state">현재 {}개의 스케줄이 있습니다</p>
             </div>
-            <TodoList state="진행 예정"></TodoList>
+            <TodoList
+              state="진행 예정"
+              title={"진행 예정"}
+              todoList={todoList}
+              setTodoList={setTodoList}
+            ></TodoList>
             <TodoList state="진행 중"></TodoList>
             <TodoList state="완료"></TodoList>
           </div>
